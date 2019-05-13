@@ -9,15 +9,15 @@ namespace FlightTracker.Tests
   public class AirlineTest : IDisposable
   {
 
-    public CategoryTest()
+    public AirlineTest()
     {
       DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=flight_tracker_test;";
     }
 
     public void Dispose()
     {
-      Category.ClearAll();
-      Item.ClearAll();
+      Airline.ClearAll();
+      Arrival.ClearAll();
     }
 
   }

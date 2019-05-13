@@ -6,10 +6,11 @@ using System.Collections.Generic;
 namespace FlightTracker.Models
 {
 
+
   public class Arrival
   {
-    private string City {get; set;}
-    private int Id {get; set;}
+    public string City {get; set;}
+    public int Id {get; set;}
 
     public Arrival (string city, int id = 0)
     {
@@ -89,7 +90,7 @@ namespace FlightTracker.Models
       cmd.CommandText = @"SELECT airline_id FROM flights WHERE arrival_id = @arrivalId;";
       MySqlParameter arrivalIdParameter = new MySqlParameter();
       arrivalIdParameter.ParameterName = "@arrivalId";
-      arrivalIdParameter.Value = _id;
+      arrivalIdParameter.Value = Id;
       cmd.Parameters.Add(arrivalIdParameter);
       var rdr = cmd.ExecuteReader() as MySqlDataReader;
       List<int> airlineIds = new List<int> {};
@@ -112,8 +113,9 @@ namespace FlightTracker.Models
         while(airlineQueryRdr.Read())
         {
           int thisAirlineId = airlineQueryRdr.GetInt32(0);
-          string airlineName = airlineQueryRdr.GetString(1);
-          Airline foundAirline = new Airline(airlineName, thisAirlineId);
+          DateTime airlineTime = airlineQueryRdr.GetDateTime(1);
+          string airlineCity = airlineQueryRdr.GetString(2);
+          Airline foundAirline = new Airline(airlineTime, airlineCity);
           airlines.Add(foundAirline);
         }
         airlineQueryRdr.Dispose();
@@ -128,7 +130,6 @@ namespace FlightTracker.Models
 
       public static Arrival Find(int id)
       {
-        Arrival findArrival = new Arrival();
         MySqlConnection conn = DB.Connection();
         conn.Open();
         var cmd = conn.CreateCommand() as MySqlCommand;

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using FlightTracker;
 
@@ -35,7 +36,7 @@ namespace FlightTracker.Models
       }
     }
 
-    public List<Item> GetItems()
+    public List<Arrival> GetArrivals()
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
@@ -46,16 +47,16 @@ namespace FlightTracker.Models
       WHERE airlines.id = @AirlineId;";
       MySqlParameter airlineIdParameter = new MySqlParameter();
       airlineIdParameter.ParameterName = "@AirlineId";
-      airlineIdParameter.Value = _id;
+      airlineIdParameter.Value = Id;
       cmd.Parameters.Add(airlineIdParameter);
       MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
-      List<Item> arrivals = new List<Item>{};
+      List<Arrival> arrivals = new List<Arrival>{};
       while(rdr.Read())
       {
         int airlineId = rdr.GetInt32(0);
         string airlineCity = rdr.GetString(1);
-        Item newItem = new Item(airlineCity, airlineId);
-        arrivals.Add(newItem);
+        Arrival newArrival = new Arrival(airlineCity, airlineId);
+        arrivals.Add(newArrival);
       }
       conn.Close();
       if (conn != null)
@@ -70,13 +71,11 @@ namespace FlightTracker.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"INSERT INTO airline (name) VALUES (@name);";
-      MySqlParameter name = new MySqlParameter();
-      name.ParameterName = "@name";
-      name.Value = this._name;
-      cmd.Parameters.Add(name);
+      cmd.CommandText = @"INSERT INTO airlines (depart_city, depart_time) VALUES (@city, @departTime);";
+      cmd.Parameters.AddWithValue("@city", DepartCity);
+      cmd.Parameters.AddWithValue("@departTime", DepartTime);
       cmd.ExecuteNonQuery();
-      _id = (int) cmd.LastInsertedId;
+      Id = (int) cmd.LastInsertedId;
       conn.Close();
       if (conn != null)
       {

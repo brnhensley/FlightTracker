@@ -2,3 +2,16 @@
 /Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.csproj.CoreCompileInputs.cache
 /Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.AssemblyInfoInputs.cache
 /Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.AssemblyInfo.cs
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.Tests.deps.json
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.Tests.runtimeconfig.json
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.Tests.runtimeconfig.dev.json
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.Tests.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.Tests.pdb
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/bin/Debug/netcoreapp2.2/FlightTracker.pdb
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.csproj.CopyComplete
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.pdb

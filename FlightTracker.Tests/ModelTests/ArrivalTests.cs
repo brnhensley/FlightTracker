@@ -112,12 +112,13 @@ namespace FlightTracker.Tests
     [TestMethod]
     public void GetAirlines_ReturnsAllArrivalAirlines_AirlineList()
     {
+      DateTime rightNow = DateTime.Now;
       //Arrange
       Arrival testArrival = new Arrival("Mow the lawn");
       testArrival.Save();
-      Airline testAirline1 = new Airline("Home stuff");
+      Airline testAirline1 = new Airline(rightNow, "Home stuff");
       testAirline1.Save();
-      Airline testAirline2 = new Airline("Work stuff");
+      Airline testAirline2 = new Airline(rightNow, "Work stuff");
       testAirline2.Save();
 
       //Act
@@ -133,9 +134,10 @@ namespace FlightTracker.Tests
     public void AddAirline_AddsAirlineToArrival_AirlineList()
     {
       //Arrange
+      DateTime rightNow = DateTime.Now;
       Arrival testArrival = new Arrival("Mow the lawn");
       testArrival.Save();
-      Airline testAirline = new Airline("Home stuff");
+      Airline testAirline = new Airline(rightNow, "Home stuff");
       testAirline.Save();
 
       //Act
