@@ -1,0 +1,11 @@
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/obj/Debug/netcoreapp2.2/FlightTracker.csprojAssemblyReference.cache
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/obj/Debug/netcoreapp2.2/FlightTracker.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/obj/Debug/netcoreapp2.2/FlightTracker.AssemblyInfoInputs.cache
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/obj/Debug/netcoreapp2.2/FlightTracker.AssemblyInfo.cs
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/bin/Debug/netcoreapp2.2/FlightTracker.deps.json
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/bin/Debug/netcoreapp2.2/FlightTracker.runtimeconfig.json
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/bin/Debug/netcoreapp2.2/FlightTracker.runtimeconfig.dev.json
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/bin/Debug/netcoreapp2.2/FlightTracker.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/bin/Debug/netcoreapp2.2/FlightTracker.pdb
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/obj/Debug/netcoreapp2.2/FlightTracker.dll
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker/obj/Debug/netcoreapp2.2/FlightTracker.pdb
