@@ -1,0 +1,4 @@
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.csprojAssemblyReference.cache
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.AssemblyInfoInputs.cache
+/Users/Guest/Desktop/FlightTracker.Solution/FlightTracker.Tests/obj/Debug/netcoreapp2.2/FlightTracker.Tests.AssemblyInfo.cs
