@@ -112,11 +112,11 @@ namespace FlightTracker.Tests
     [TestMethod]
     public void GetAirlines_ReturnsAllArrivalAirlines_AirlineList()
     {
-      DateTime rightNow = DateTime.Now;
+      DateTime rightNow = new DateTime(2017, 1, 18);
       //Arrange
       Arrival testArrival = new Arrival("Mow the lawn");
       testArrival.Save();
-      Airline testAirline1 = new Airline(rightNow, "Home stuff");
+      Airline testAirline1 = new Airline(rightNow, "a");
       testAirline1.Save();
       Airline testAirline2 = new Airline(rightNow, "Work stuff");
       testAirline2.Save();
@@ -125,19 +125,22 @@ namespace FlightTracker.Tests
       testArrival.AddAirline(testAirline1);
       List<Airline> result = testArrival.GetAirlines();
       List<Airline> testList = new List<Airline> {testAirline1};
+      Console.WriteLine(testList[0].Id);
+      Console.WriteLine(result[0].Id);
 
       //Assert
-      CollectionAssert.AreEqual(testList, result);
+      Assert.AreEqual(testList[0].DepartCity, result[0].DepartCity);
     }
 
     [TestMethod]
     public void AddAirline_AddsAirlineToArrival_AirlineList()
     {
       //Arrange
-      DateTime rightNow = DateTime.Now;
+      DateTime rightNow = new DateTime(2017, 1, 18);
       Arrival testArrival = new Arrival("Mow the lawn");
       testArrival.Save();
       Airline testAirline = new Airline(rightNow, "Home stuff");
+      Console.WriteLine("~~EAT ASS~~");
       testAirline.Save();
 
       //Act
@@ -145,9 +148,11 @@ namespace FlightTracker.Tests
 
       List<Airline> result = testArrival.GetAirlines();
       List<Airline> testList = new List<Airline>{testAirline};
+      Console.WriteLine(testList[0].Id);
+      Console.WriteLine(result[0].Id);
 
       //Assert
-      CollectionAssert.AreEqual(testList, result);
+      Assert.AreEqual(testList[0].DepartTime, result[0].DepartTime);
     }
 
   }

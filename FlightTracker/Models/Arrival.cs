@@ -42,15 +42,15 @@ namespace FlightTracker.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"INSERT INTO flights (airline_id, arrival_id) VALUES (@AirlineId, @AttivalId);";
-      MySqlParameter airline_id = new MySqlParameter();
-      airline_id.ParameterName = "@AirlineId";
-      airline_id.Value = newAirline.Id;
-      cmd.Parameters.Add(airline_id);
-      MySqlParameter arrival_id = new MySqlParameter();
-      arrival_id.ParameterName = "@AttivalId";
-      arrival_id.Value = Id;
-      cmd.Parameters.Add(arrival_id);
+      cmd.CommandText = @"INSERT INTO flights (airlines_id, cities_id) VALUES (@AirlineId, @AttivalId);";
+      MySqlParameter airlines_id = new MySqlParameter();
+      airlines_id.ParameterName = "@AirlineId";
+      airlines_id.Value = newAirline.Id;
+      cmd.Parameters.Add(airlines_id);
+      MySqlParameter cities_id = new MySqlParameter();
+      cities_id.ParameterName = "@AttivalId";
+      cities_id.Value = Id;
+      cmd.Parameters.Add(cities_id);
       cmd.ExecuteNonQuery();
       conn.Close();
       if(conn != null)
@@ -87,7 +87,7 @@ namespace FlightTracker.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"SELECT airline_id FROM flights WHERE arrival_id = @arrivalId;";
+      cmd.CommandText = @"SELECT airlines_id FROM flights WHERE cities_id = @arrivalId;";
       MySqlParameter arrivalIdParameter = new MySqlParameter();
       arrivalIdParameter.ParameterName = "@arrivalId";
       arrivalIdParameter.Value = Id;
@@ -166,6 +166,7 @@ namespace FlightTracker.Models
           Arrival newArrival = (Arrival) otherArrival;
           bool idEquality = this.Id == newArrival.Id;
           bool cityEquality = this.City == newArrival.City;
+          //Console.WriteLine("id"+idEquality+"city"+cityEquality);
           return (idEquality && cityEquality);
         }
       }
